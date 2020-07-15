@@ -1,0 +1,21 @@
+server:
+  port: 8091
+
+spring:
+  redis:
+    host: localhost
+#    password: 123456
+#    lettuce:
+#      pool:
+#        max-active: 300
+#        max-idle: 100
+#        max-wait: 200ms
+#        min-idle: 50
+#      shutdown-timeout: 100ms
+#    timeout: 6000
+#    sentinel:
+#      master: mymaster
+#      nodes: 192.168.2.107:26379,192.168.2.107:26380,192.168.2.107:26381
+  klock:
+    address: 127.0.0.1:6379
+

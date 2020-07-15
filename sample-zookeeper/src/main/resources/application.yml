@@ -1,0 +1,11 @@
+server:
+  port: 5590
+
+spring:
+  data:
+    elasticsearch:
+      host:
+        - 192.168.56.118
+      port: 9200
+      username:
+      password:

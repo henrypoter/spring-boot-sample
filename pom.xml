@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.ypp.tunte</groupId>
+    <artifactId>spring-boot-sample</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>sample-kafka</module>
+        <module>sample-hello</module>
+        <module>sample-zookeeper</module>
+        <module>sample-minio</module>
+        <module>sample-ali-pay</module>
+        <module>sample-IJPay</module>
+        <module>sample-jasypt</module>
+        <module>sample-simple-image</module>
+        <module>sample-wx-mp</module>
+        <module>drools-demo</module>
+        <module>sample-easy-rules</module>
+        <module>sample-redis</module>
+        <module>spring-boot-sample-starter</module>
+        <module>sample-elasticsearch</module>
+        <module>sample-springboot-elasticsearch</module>
+        <module>sample-sharding-jdbc</module>
+        <module>sample-canal</module>
+        <module>sample-elasticsearch-new</module>
+        <module>sample-spring-batch</module>
+        <module>sample-prometheus</module>
+    </modules>
+
+    <packaging>pom</packaging>
+    <properties>
+        <spring-boot.version>2.3.1.RELEASE</spring-boot.version>
+        <fastjson.version>1.2.51</fastjson.version>
+        <hutool.version>5.2.0</hutool.version>
+        <guava.version>28.2-jre</guava.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <aws.sdk.version>1.11.732</aws.sdk.version>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.test.skip>true</maven.test.skip>
+        <spring-cloud-version>Hoxton.SR5</spring-cloud-version>
+        <drools.version>7.34.0.Final</drools.version>
+        <elasticsearch.version>7.6.1</elasticsearch.version>
+
+    </properties>
+
+    <dependencies>
+        <!--测试依赖-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.junit.vintage</groupId>
+                    <artifactId>junit-vintage-engine</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-context</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>${fastjson.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>${hutool.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>${guava.version}</version>
+        </dependency>
+
+    </dependencies>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <!-- Import dependency management from Spring Boot -->
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud-version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.amazonaws</groupId>
+                <artifactId>aws-java-sdk-bom</artifactId>
+                <version>${aws.sdk.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.drools</groupId>
+                <artifactId>drools-bom</artifactId>
+                <type>pom</type>
+                <version>${drools.version}</version>
+                <scope>import</scope>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+
+    <repositories>
+        <!--阿里云代理-->
+        <repository>
+            <id>aliyun</id>
+            <name>aliyun</name>
+            <url>http://maven.aliyun.com/nexus/content/groups/public</url>
+        </repository>
+    </repositories>
+</project>

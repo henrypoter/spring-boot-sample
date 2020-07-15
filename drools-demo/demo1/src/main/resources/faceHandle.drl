@@ -1,0 +1,14 @@
+package com.ypp.tunte.rules
+import com.ypp.tunte.sample.drools.demo1.model.Person
+
+rule "faceHandleTest-less-20"
+agenda-group "faceHandleTest"
+when
+    $p : Person(age<20)
+    then $p.setName("less 20"); end
+
+rule "faceHandleTest-more-20"
+agenda-group "faceHandleTest"
+when
+    $p: Person(age>20)
+    then $p.setName("more 20"); end

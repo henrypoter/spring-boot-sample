@@ -1,0 +1,9 @@
+server:
+  port: 8096
+spring:
+  elasticsearch:
+    rest:
+      uris: http://192.168.56.118:9200
+      connection-timeout: 300s
+      read-timeout: 300s
+

@@ -1,0 +1,13 @@
+server:
+  port: 8089
+
+my:
+  printer: laser #ink
+
+tunte:
+  aliyun-oss:
+    endPoint: oss-cn-beijing.aliyuncs.com
+    accessKeyId: LTAI4Fib13u2BHxVJDZWEa48
+    accessKeySecret: HKdpQvEXWyjIvCqXP7LCQ47Ifbg6x0
+    bucketName: tunte
+    enable: true
