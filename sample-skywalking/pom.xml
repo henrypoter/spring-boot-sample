@@ -9,6 +9,9 @@
 	</parent>
 	<artifactId>sample-skywalking</artifactId>
 	<name>sample-skywalking</name>
+
+	<packaging>jar</packaging>
+
 	<description>skywalking 示例</description>
 
 	<properties>

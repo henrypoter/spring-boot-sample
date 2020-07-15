@@ -14,8 +14,8 @@ WORKDIR /sample-skywalking
 
 EXPOSE 8092
 
-ADD ./target/sample-skywalking.jar ./
+ADD ./target/sample-skywalking-1.0-SNAPSHOT.jar ./
 
 COPY agent/ /sample-skywalking/agent/
 
-CMD java $SKYWALKING_AGENT $JAVA_OPTS -jar keyu4cloud-gateway.jar
+CMD java $SKYWALKING_AGENT $JAVA_OPTS -jar sample-skywalking-1.0-SNAPSHOT.jar
